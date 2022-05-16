@@ -161,41 +161,26 @@
 
                     </thead>
                     <tbody>
-                        <?php
-                        $idpro = 1;
-                        while ($row = mysqli_fetch_array($query)) { ?>
+                        <?php foreach ($this->MODEL->listar() as $k) : ?>
                             <tr>
-                                <!--<td scope="row"><?php echo $idpro ?></td>-->
-                                <td><?php echo $row['Id_Usuario'] ?></td>
-                                <td><?php echo $row['Nombre_Usuario'] ?></td>
-                                <td><?php echo $row['Cedula_Usuario'] ?></td>
-                                <td><?php echo $row['Correo_Usuario'] ?></td>
-                                <td><?php echo $row['Num_Usuario'] ?></td>
-                                <td><?php echo $row['Observacion'] ?></td>
+                                <td><?php echo $k->Id_Usuario; ?></td>
+                                <td><?php echo $k->Nombre_Usuario; ?></td>
+                                <td><?php echo $k->Cedula_Usuario; ?></td>
+                                <td><?php echo $k->Correo_Usuario; ?></td>
+                                <td><?php echo $k->Num_Usuario; ?></td>
+                                <td><?php echo $k->Observacion; ?></td>
                                 <td>
-                                    <a name="edit" id="" role="button" class="bfix" href="fixPA.php?username=<?php echo $usuarioingresado ?>&IdPa=<?php echo $row['IdPa'] ?>&message=<?php echo $row['NombrePa'] ?>&MarcaPa=<?php echo $row['MarcaPa']; ?>&ReferenciaPa=<?php echo $row['ReferenciaPa']; ?>&SerialPa=<?php echo $row['SerialPa']; ?>">
-                                        <i class="fas fa-pencil-alt"></i>
-                                    </a>
-                                    <a name="id" id="" class="bdelete" href="deletePA.php?IdPa=<?php echo $row['IdPa'] ?>" role="button">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </a>
+                                    <a href="?c=nuevo&Id=<?php echo $k->Id ?>" class="btn btn-outline-warning"><i class="fas fa-edit"></i></a> 
+                                    <a href="?c=eliminar&Id=<?php echo $k->Id ?> " class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>
                                 </td>
+                                
                             </tr>
-                        <?php
-                            $idpro++;
-                        } ?>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
                 </div>
             </div>
         </div>
-        <!--FOOTER-->
-        <footer class="footer-text">
-            <a href="#" class="float-left"><i class="fab fa-instagram"></i> ARSAS</a>
-            <a href="https://www.instagram.com/ceso.tecco/" target="_blank" class="">© Diseñado por CesoTecCo</a>
-            <a href="#" class="float-right"><i class="fab fa-whatsapp"></i> +57 (310) 215 62 05</a>
-        </footer>
-
-  
+ 
     </body>
 </html>
