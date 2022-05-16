@@ -44,6 +44,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
+        <!--NAV BAR-->
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
             <div class="container-fluid">
                 <a class="navbar-brand" href="">Alejandra Rodríguez S.A.S</a>
@@ -53,13 +54,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-dollar-sign"></i> PLANES Y PRECIOS</a>
+                        <a class="nav-link" aria-current="page" href="#"><i class="fas fa-dollar-sign"></i> PLANES Y PRECIOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-users"></i> INTERESADOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-search"></i> CONSULTAS</a>
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i> USUARIOS</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -68,7 +69,25 @@
                 </div>
             </div>
         </nav>
-        <h1>Hola <?php echo $usuarioingresado ?></h1>
+        <!--CAROUSEL-->
+        <div class="carrusel">
+            <ul class="carrusel-fotos">
+                <li id="foto1"><img src="../img/p1.jpeg" alt=""></li>
+                <li id="foto2"><img src="../img/p2.jpeg" alt=""></li>
+                <li id="foto3"><img src="../img/p3.jpeg" alt=""></li>
+                <li id="foto4"><img src="../img/p4.jpeg" alt=""></li>
+                <li id="foto5"><img src="../img/p5.jpeg" alt=""></li>
+            </ul>
+            <ul class="carrusel-menu">
+                <li><a href="#foto1"><img src="../img/p1.jpeg" alt=""></a></li>
+                <li><a href="#foto2"><img src="../img/p2.jpeg" alt=""></a></li>
+                <li><a href="#foto3"><img src="../img/p3.jpeg" alt=""></a></li>
+                <li><a href="#foto4"><img src="../img/p4.jpeg" alt=""></a></li>
+                <li><a href="#foto5"><img src="../img/p5.jpeg" alt=""></a></li>
+            </ul>
+        </div>
+
+        <!--FOOTER-->
         <footer class="footer-text">
             <a href="#" class="float-left"><i class="fab fa-instagram"></i> ARSAS</a>
             <a href="https://www.instagram.com/ceso.tecco/" target="_blank" class="">© Diseñado por CesoTecCo</a>
