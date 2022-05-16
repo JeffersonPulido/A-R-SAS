@@ -1,17 +1,12 @@
 <?php
-    // session_start();
-    // if (isset($_SESSION['username'])) {
-    //     $usuarioingresado = $_SESSION['username'];
-    // }
-    // if (isset($_GET['username'])) {
-    //     $usuarioingresado = $_SESSION['username'] = $_GET['username'];
-    // }
+    session_start();
+    if (isset($_SESSION['username'])) {
+        $usuarioingresado = $_SESSION['username'];
+    }
+    if (isset($_GET['username'])) {
+        $usuarioingresado = $_SESSION['username'] = $_GET['username'];
+    }
 
-    // if ($_SESSION['username'] == null) {
-    //     echo "<script>alert('Por favor logueate antes');</script>";
-    //     header("Refresh:0 , url=../../index.html");
-    //     exit();
-    // }
 ?>
 <!--LANDING PAGE GENERAL-->
 <html>
@@ -57,7 +52,7 @@
                         <a class="nav-link" aria-current="page" href="#"><i class="fas fa-dollar-sign"></i> PLANES Y PRECIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-users"></i> INTERESADOS</a>
+                        <a class="nav-link" href="init.php"><i class="fas fa-users"></i> INTERESADOS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-search"></i> USUARIOS</a>

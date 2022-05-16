@@ -1,13 +1,15 @@
 <?php
 
-class Materia
+class UsuarioInt
 {
 
     public $Conexion;
-    public $Id;
-    public $Nombre;
-    public $Duracion;
-    public $Profesor;
+    public $Id_Usuario;
+    public $Nombre_Usuario;
+    public $Cedula_Usuario;
+    public $Correo_Usuario;
+    public $Num_Usuario;
+    public $Observacion;
     public function __construct()
     {
         try {
@@ -20,7 +22,7 @@ class Materia
     public function listar()
     {
         try {
-            $query = 'SELECT * FROM cursos';
+            $query = 'SELECT * FROM usuario_interesado';
             $smt = $this->Conexion->prepare($query);
             $smt->execute();
             return $smt->fetchAll(PDO::FETCH_OBJ);
@@ -28,12 +30,12 @@ class Materia
             die($e->getMessage());
         }
     }
-    public function cargarPersonxID( $Id)
+    public function cargarPersonxID( $Id_Usuario)
     {
         try {
-            $query = "select * from cursos where Id = ?";
+            $query = "select * from usuario_interesado where Id_Usuario = ?";
             $smt = $this->Conexion->prepare($query);
-            $smt->execute(array($Id));
+            $smt->execute(array($Id_Usuario));
             return $smt->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
@@ -43,8 +45,8 @@ class Materia
     public function insertar(Materia $data)
     {
         try {
-            $query = "insert into cursos (Id, Nombre, Duracion, Profesor) values(?, ?, ?, ?)";
-            $this->Conexion->prepare($query)->execute(array($data->Id, $data->Nombre, $data->Duracion, $data->Profesor));
+            $query = "insert into usuario_interesado (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Observacion) values(?, ?, ?, ?, ?, ?)";
+            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -55,9 +57,9 @@ class Materia
     public function delete( $Id)
     {
         try {
-            $query = "delete  from cursos where Id = ?";
+            $query = "delete  from usuario_interesado where Id_Usuario = ?";
             $smt = $this->Conexion->prepare($query);
-            $smt->execute(array($Id));
+            $smt->execute(array($Id_Usuario));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -66,8 +68,8 @@ class Materia
     public function actualizarDatos(Materia $data)
     {
         try {
-            $query = "update cursos set Nombre=?, Duracion=?, Profesor=? where Id=?";
-            $this->Conexion->prepare($query)->execute(array($data->Nombre, $data->Duracion, $data->Profesor, $data->Id));
+            $query = "update usuario_interesado set Nombre_Usuario=?, Cedula_Usuario=?, Correo_Usuario=?, Num_Usuario=?, Observacion=? where Id_Usuario=?";
+            $this->Conexion->prepare($query)->execute(array($data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion, $data->Id_Usuario));
         } catch (Exception $e) {
             die($e->getMessage());
         }
