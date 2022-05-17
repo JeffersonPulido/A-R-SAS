@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"><i class="fas fa-dollar-sign"></i> PLANES Y PRECIOS</a>
+                <a class="nav-link" href="initP.php"><i class="fas fa-dollar-sign"></i> PLANES Y PRECIOS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="init.php"><i class="fas fa-users"></i> INTERESADOS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-search"></i> USUARIOS</a>
+                <a class="nav-link" href="initU.php"><i class="fas fa-search"></i> USUARIOS</a>
             </li>
         </ul>
         <form class="d-flex">
