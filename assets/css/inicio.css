@@ -1,3 +1,6 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 table th{
     border: 1px solid black;
     border-collapse: collapse;
@@ -27,87 +30,22 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-.badd {
-    border-radius: 5px;
-    background-color: #218637;
-    color: whitesmoke;
-    text-decoration: none;
-    padding: 1%;
-    transition: 0.5s;
-    text-align: center;
-    align-items: center;
-}
-.badd:hover {
-    background-color: #21a052;
-    color: black;
-    text-align: center;
-    padding: 1.5%;
-}
-
-.bfix {
-    border-radius: 5px;
-    background-color: #ffcc33;
-    color: black;
-    text-decoration: none;
-    padding: 5%;
-    transition: 0.5s;
-    text-align: center;
-    align-items: center;
-    text-decoration: none;
-}
-.bfix:hover {
-    background-color: #fdb515;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
-.bdelete {
-    border-radius: 5px;
-    background-color: #e60000;
-    text-decoration: none;
-    color: white;
-    padding: 5%;
-    transition: 0.5s;
-    text-align: center;
-    margin-left: 5%;
-}
-.bdelete:hover {
-    background-color: #D9ddd4;
-    color: red;
-    text-align: center;
-    text-decoration: none;
-}
-
-
-.bpdf {
-    border-radius: 5px;
-    background-color: #ac4949;
-    text-decoration: none;
-    color: white;
-    padding: 5%;
-    transition: 0.5s;
-    text-align: center;
-}
-.bpdf:hover {
-    background-color: #D9ddd4;
-    color: #ac4949;;
-    text-align: center;
-    padding: 8%;
-}
-.Addlist {
-    padding: 5px 30px 5px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(36, 114, 17);
-    transition: 0.5s;
-}
-.Addlist:hover {
-    color: black;
-    background-color: #BBFFBB;
-}
-
 /*para alinear los botones y cuadro de busqueda*/
 .btn-group, .btn-group-vertical {
     position: absolute !important;
+}
+
+.titulo{
+    color: black;
+    text-align: center;
+    font-size: 5vh;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 500px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 }

@@ -10,7 +10,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--===TITLE====-->
-        <title>Home | Alejandra Rodríguez S.A.S</title>
+        <title>Interesados | Alejandra Rodríguez S.A.S</title>
         <!--====ICO===-->
         <link rel="shortcut icon" href="../img/icono.ico"> 
         <!--====CSS===-->
@@ -143,10 +143,10 @@
         <div class="container responsive">
             <div class="row mt-3">
                 <hr>
-                <h1 id="titulo">Usuarios Interesados</h1>
+                <h1 class="titulo">Usuarios Interesados</h1>
                 <hr>
-                <div class="  mt-3 w-100">
-                    <a href="?c=nuevo" class="btn btn-block  btn btn-success my-3 shadow-lg">Agregar</a>
+                <div class=" mt-3 w-100">
+                    <a href="?c=nuevo" class="btn btn-block  btn btn-success my-3 shadow-lg"><i class="fas fa-plus-circle"></i> Agregar</a>
                     <br>
                     <table id="TablaDat" class="table table-sm" style="width:90%">
                     <thead class="table-dark" >
@@ -170,8 +170,8 @@
                                 <td><?php echo $k->Num_Usuario; ?></td>
                                 <td><?php echo $k->Observacion; ?></td>
                                 <td>
-                                    <a href="?c=nuevo&Id=<?php echo $k->Id ?>" class="btn btn-outline-warning"><i class="fas fa-edit"></i></a> 
-                                    <a href="?c=eliminar&Id=<?php echo $k->Id ?> " class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="?c=nuevo&Id=<?php echo $k->Id ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
+                                    <a href="?c=eliminar&Id=<?php echo $k->Id ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                                 
                             </tr>

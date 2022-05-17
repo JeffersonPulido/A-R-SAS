@@ -7,6 +7,11 @@
     text-align: center;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .login{
     padding: 5% 0% 5% 0%;
     background-color: whitesmoke;
@@ -93,6 +98,10 @@ display: none;
 }
 
 @media screen and (min-width: 500px) {
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .carrusel-fotos {
     overflow: hidden;
 }
