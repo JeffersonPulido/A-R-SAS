@@ -112,7 +112,6 @@
             });
         </script>
     </head>
-
     <body>
         <!--NAV BAR-->
         <nav class="navbar navbar-expand-lg navbar-light bg-warning">
@@ -148,7 +147,7 @@
                 <div class=" mt-3 w-100">
                     <a href="?c=nuevo" class="btn btn-block  btn btn-success my-3 shadow-lg"><i class="fas fa-plus-circle"></i> Agregar</a>
                     <br>
-                    <table id="TablaDat" class="table table-sm" style="width:90%">
+                    <table id="TablaDat" class="table table-sm" style="width:100%">
                     <thead class="table-dark" >
                         <!--<th scope="col">#</th>-->
                         <th scope="col">ID</th>
@@ -158,7 +157,6 @@
                         <th scope="col">Numero</th>
                         <th scope="col">Observaciones</th>
                         <th scope="col">Acciones</th>
-
                     </thead>
                     <tbody>
                         <?php foreach ($this->MODEL->listar() as $k) : ?>
@@ -170,10 +168,9 @@
                                 <td><?php echo $k->Num_Usuario; ?></td>
                                 <td><?php echo $k->Observacion; ?></td>
                                 <td>
-                                    <a href="?c=nuevo&Id=<?php echo $k->Id ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
-                                    <a href="?c=eliminar&Id=<?php echo $k->Id ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="?c=nuevo&Id_Usuario=<?php echo $k->Id_Usuario ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
+                                    <a href="?c=eliminar&Id_Usuario=<?php echo $k->Id_Usuario ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
-                                
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
@@ -181,6 +178,7 @@
                 </div>
             </div>
         </div>
- 
+        <!--FOOTER-->
+        <?php include 'footer.php'; ?>
     </body>
 </html>

@@ -26,17 +26,19 @@ class Control
     {
 
         $guar = new UsuarioInt();
-        $guar->Id = $_POST['txtId'];
-        $guar->Nombre = $_POST['txtNombre'];
-        $guar->Duracion = $_POST['txtDuracion'];
-        $guar->Profesor = $_POST['txtProfesor'];
-        $guar->Id > 0 ? $this->MODEL->actualizarDatos($guar) : $this->MODEL->insertar($guar);
+        $guar->Id_Usuario = $_POST['txtId_Usuario'];
+        $guar->Nombre_Usuario = $_POST['txtNombre'];
+        $guar->Cedula_Usuario = $_POST['txtCedula'];
+        $guar->Correo_Usuario = $_POST['txtCorreo'];
+        $guar->Num_Usuario = $_POST['txtCelular'];
+        $guar->Observacion = $_POST['txtObservacion'];
+        $guar->Id_Usuario > 0 ? $this->MODEL->actualizarDatos($guar) : $this->MODEL->insertar($guar);
         header("location: ../views/init.php"); 
     }
 
     public function eliminar()
     {
-        $this->MODEL->delete($_REQUEST['Id']);
+        $this->MODEL->delete($_REQUEST['Id_Usuario']);
         header("location: ../views/init.php"); 
     }
 }

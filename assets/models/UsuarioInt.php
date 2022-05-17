@@ -42,7 +42,7 @@ class UsuarioInt
         }
     }
     // insert
-    public function insertar(Materia $data)
+    public function insertar(UsuarioInt $data)
     {
         try {
             $query = "insert into usuario_interesado (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Observacion) values(?, ?, ?, ?, ?, ?)";
@@ -54,7 +54,7 @@ class UsuarioInt
 
     // eliminar
 
-    public function delete( $Id)
+    public function delete( $Id_Usuario)
     {
         try {
             $query = "delete  from usuario_interesado where Id_Usuario = ?";
@@ -65,7 +65,7 @@ class UsuarioInt
         }
     }
 
-    public function actualizarDatos(Materia $data)
+    public function actualizarDatos(UsuarioInt $data)
     {
         try {
             $query = "update usuario_interesado set Nombre_Usuario=?, Cedula_Usuario=?, Correo_Usuario=?, Num_Usuario=?, Observacion=? where Id_Usuario=?";
