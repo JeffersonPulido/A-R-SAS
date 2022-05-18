@@ -122,7 +122,7 @@
                 <h1 class="titulo">Usuarios Interesados</h1>
                 <hr>
                 <div class=" mt-3 w-100">
-                    <a href="?c=nuevo" class="btn btn-block  btn btn-success my-3 shadow-lg"><i class="fas fa-plus-circle"></i> Agregar</a>
+                    <a href="?c=nuevo" class="btn btn-block  btn btn-success my-3 shadow-lg btn-sm"><i class="fas fa-plus-circle"></i> Agregar</a>
                     <br>
                     <table id="TablaDat" class="table table-sm" style="width:100%">
                     <thead class="table-dark" >

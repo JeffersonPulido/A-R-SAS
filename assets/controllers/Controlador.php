@@ -1,6 +1,7 @@
 <?php
 include_once '../models/UsuarioInt.php';
 include_once '../models/Usuario.php';
+include_once '../models/Planes.php';
 class Control
 {
     public $MODEL;
@@ -91,3 +92,44 @@ class ControlU
     }
 }
 
+class ControlP
+{
+    public $MODEL;
+   
+    public function __construct()
+
+    {
+        $this->MODEL = new Planes();
+    }
+    public function index()
+    {
+        include_once '../views/inicioP.php';
+    }
+    public function nuevo()
+    {
+        $guar = new Planes();
+        if (isset($_REQUEST['Id_Plan'])) {
+            $guar = $this->MODEL->cargarPersonxID($_REQUEST['Id_Plan']);
+        }
+        include_once '../views/saveP.php';
+    }
+
+    public function guardar()
+    {
+
+        $guar = new Planes();
+        $guar->Id_Plan = $_POST['txtId_Plan'];
+        $guar->Nombre_Plan = $_POST['txtNombre_Plan'];
+        $guar->Descripcion_Plan = $_POST['txtDescripcion_Plan'];
+        $guar->Riesgo_Plan = $_POST['txtRiesgo_Plan'];
+        $guar->Valor = $_POST['txtValor'];
+        $guar->Id_Plan > 0 ? $this->MODEL->actualizarDatos($guar) : $this->MODEL->insertar($guar);
+        header("location: ../views/initP.php"); 
+    }
+
+    public function eliminar()
+    {
+        $this->MODEL->delete($_REQUEST['Id_Plan']);
+        header("location: ../views/initP.php"); 
+    }
+}

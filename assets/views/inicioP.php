@@ -1,6 +1,6 @@
 <?php
     require_once "../config/Conexion.php";
-    $sql_fetch_todos = "SELECT * FROM usuario_nuevo ORDER BY Id_Usuario ASC";
+    $sql_fetch_todos = "SELECT * FROM planes ORDER BY Id_Plan ASC";
     $query = mysqli_query($conn, $sql_fetch_todos);
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--===TITLE====-->
-        <title>Registrados | Alejandra Rodríguez S.A.S</title>
+        <title>Planes | Alejandra Rodríguez S.A.S</title>
         <!--====ICO===-->
         <link rel="shortcut icon" href="../img/icono.ico"> 
         <!--====CSS===-->
@@ -119,9 +119,9 @@
         <div class="container responsive">
             <div class="row mt-3">
                 <hr>
-                <h1 class="titulo">Usuarios Registrados</h1>
+                <h1 class="titulo">Planes y Precios</h1>
                 <hr>
-                <div class=" mt-3 w-100">
+                <div class=" w-100">
                     <a href="?c=nuevo" class="btn btn-block  btn btn-success my-3 shadow-lg btn-sm"><i class="fas fa-plus-circle"></i> Agregar</a>
                     <br>
                     <table id="TablaDat" class="table table-sm" style="width:100%">
@@ -129,32 +129,22 @@
                         <!--<th scope="col">#</th>-->
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Correo</th>
-                        <th scope="col">Numero</th>
-                        <th scope="col">Direccion</th>
-                        <th scope="col">EPS</th>
-                        <th scope="col">Pensiones</th>
-                        <th scope="col">Plan</th>
-                        <th scope="col">Observaciones</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Riesgo</th>
+                        <th scope="col">Valor</th>
                         <th scope="col">Acciones</th>
                     </thead>
                     <tbody>
                         <?php foreach ($this->MODEL->listar() as $k) : ?>
                             <tr>
-                                <td><?php echo $k->Id_Usuario; ?></td>
-                                <td><?php echo $k->Nombre_Usuario; ?></td>
-                                <td><?php echo $k->Cedula_Usuario; ?></td>
-                                <td><?php echo $k->Correo_Usuario; ?></td>
-                                <td><?php echo $k->Num_Usuario; ?></td>
-                                <td><?php echo $k->Dire_Usuario; ?></td>
-                                <td><?php echo $k->Eps_Usuario; ?></td>
-                                <td><?php echo $k->Pensiones_Usuario; ?></td>
-                                <td><?php echo $k->Plan_Usuario; ?></td>
-                                <td><?php echo $k->Observacion; ?></td>
+                                <td><?php echo $k->Id_Plan; ?></td>
+                                <td><?php echo $k->Nombre_Plan; ?></td>
+                                <td><?php echo $k->Descripcion_Plan; ?></td>
+                                <td><?php echo $k->Riesgo_Plan; ?></td>
+                                <td>$ <?php echo $k->Valor; ?></td>
                                 <td>
-                                    <a href="?c=nuevo&Id_Usuario=<?php echo $k->Id_Usuario ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
-                                    <a href="?c=eliminar&Id_Usuario=<?php echo $k->Id_Usuario ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="?c=nuevo&Id_Plan=<?php echo $k->Id_Plan ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
+                                    <a href="?c=eliminar&Id_Plan=<?php echo $k->Id_Plan ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
