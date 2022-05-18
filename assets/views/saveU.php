@@ -22,7 +22,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!--===TITLE====-->
-        <title>Agregar | Usuarios Interesados</title>
+        <title>Agregar | Usuarios Nuevo</title>
         <!--====ICO===-->
         <link rel="shortcut icon" href="../img/icono.ico"> 
         <!--====CSS===-->
@@ -34,7 +34,7 @@
             <div class="row mt-3">
                 <br>
                 <div class="row">
-                    <h3>Datos Usuario Interesado </h3>
+                    <h3>Datos Usuario Nuevo </h3>
                 </div>
                 <br>
                 <div class="w-100">
@@ -58,12 +58,58 @@
                                 <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" id="txtCelular" name="txtCelular" placeholder="Ingresa el numero celular del usuario... Ej. 310-221-3284" required value="<?php echo  $guar->Num_Usuario; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="formGroupExampleInput5">Observaciones</label>
+                                <label for="formGroupExampleInput5">Direccion Residencia</label>
+                                <input type="text" class="form-control" id="txtDireccion" name="txtDireccion" placeholder="Ingresa la direccion del usuario..." required value="<?php echo  $guar->Dire_Usuario; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput6">EPS</label>
+                                <input type="text" class="form-control" id="txtEps" name="txtEps" placeholder="Ingresa la EPS del usuario..." required value="<?php echo  $guar->Eps_Usuario; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput7">PENSIONES</label>
+                                <input type="text" class="form-control" id="txtPensiones" name="txtPensiones" placeholder="Ingresa el Fondo de Pensiones del usuario..." required value="<?php echo  $guar->Pensiones_Usuario; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput8">PLAN</label>
+                                <select name="txtPlan" id="txtPlan" class="custom-select" required>
+                                    <option value="<?php echo  $guar->Plan_Usuario; ?>"><?php echo  $guar->Plan_Usuario; ?></option>
+                                    <optgroup label="Plan Basico">
+                                        <option value="Basico I">Basico I</option>
+                                        <option value="Basico II">Basico II</option>
+                                        <option value="Basico III">Basico III</option>
+                                        <option value="Basico IV">Basico IV</option>
+                                        <option value="Basico V">Basico V</option>
+                                    </optgroup>
+                                    <optgroup label="Plan Familiar">
+                                        <option value="Familiar I">Familiar I</option>
+                                        <option value="Familiar II">Familiar II</option>
+                                        <option value="Familiar III">Familiar III</option>
+                                        <option value="Familiar IV">Familiar IV</option>
+                                        <option value="Familiar V">Familiar V</option>
+                                    </optgroup>
+                                    <optgroup label="Plan Complementario">
+                                        <option value="Complementario I">Complementario I</option>
+                                        <option value="Complementario II">Complementario II</option>
+                                        <option value="Complementario III">Complementario III</option>
+                                        <option value="Complementario IV">Complementario IV</option>
+                                        <option value="Complementario V">Complementario V</option>
+                                    </optgroup>
+                                    <optgroup label="Plan Integral">
+                                        <option value="Integral I">Integral I</option>
+                                        <option value="Integral II">Integral II</option>
+                                        <option value="Integral III">Integral III</option>
+                                        <option value="Integral IV">Integral IV</option>
+                                        <option value="Integral V">Integral V</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput9">Observaciones</label>
                                 <textarea class="form-control" id="txtObservacion" name="txtObservacion" placeholder="Ingresa observaciones acerca del interes del usuario..." rows="3" cols="50" required><?php echo  $guar->Observacion; ?></textarea>
                             </div>
                             <div class="form-group">                       
                                 <input type="submit" value="Guardar" class="btn btn-success ">                   
-                                <a href="init.php" class="btn btn-primary float-right">Volver</a>
+                                <a href="initU.php" class="btn btn-primary float-right">Volver</a>
                             </div>
                         </form>
                     </div>

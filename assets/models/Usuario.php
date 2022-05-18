@@ -50,7 +50,7 @@ class Usuario
     {
         try {
             $query = "insert into usuario_nuevo (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Dire_Usuario, Eps_Usuario, Pensiones_Usuario, Plan_Usuario, Observacion) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion));
+            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Dire_Usuario, $data->Eps_Usuario, $data->Pensiones_Usuario, $data->Plan_Usuario, $data->Observacion));
         } catch (Exception $e) {
             die($e->getMessage());
         }
