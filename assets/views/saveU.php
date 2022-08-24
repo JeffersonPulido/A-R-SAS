@@ -107,6 +107,10 @@
                                 <label for="formGroupExampleInput9">Observaciones</label>
                                 <textarea class="form-control" id="txtObservacion" name="txtObservacion" placeholder="Ingresa observaciones acerca del interes del usuario..." rows="3" cols="50" required><?php echo  $guar->Observacion; ?></textarea>
                             </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput10">Fecha</label>
+                                <input type="date" class="form-control" id="txtFecha" name="txtFecha" placeholder="Ingresa fecha de registro del usuario..." required value="<?php echo  $guar->Fecha; ?>"><br>
+                            </div>
                             <div class="form-group">                       
                                 <input type="submit" value="Guardar" class="btn btn-success ">                   
                                 <a href="initU.php" class="btn btn-primary float-right">Volver</a>

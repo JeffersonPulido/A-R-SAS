@@ -23,7 +23,7 @@
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2022 Desarrollado por
     <a class="text-white" href="https://www.instagram.com/ceso.tecco/" target="_blank">CesoTec CO</a>
   </div>

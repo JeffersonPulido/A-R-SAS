@@ -127,23 +127,25 @@
                     <table id="TablaDat" class="table table-sm" style="width:100%">
                     <thead class="table-dark" >
                         <!--<th scope="col">#</th>-->
-                        <th scope="col">ID</th>
+                        <!-- <th scope="col">ID</th> -->
                         <th scope="col">Nombre</th>
                         <th scope="col">Cedula</th>
                         <th scope="col">Correo</th>
                         <th scope="col">Numero</th>
                         <th scope="col">Observaciones</th>
+                        <th scope="col">Fecha</th>
                         <th scope="col">Acciones</th>
                     </thead>
                     <tbody>
                         <?php foreach ($this->MODEL->listar() as $k) : ?>
                             <tr>
-                                <td><?php echo $k->Id_Usuario; ?></td>
+                                <!-- <td><?php echo $k->Id_Usuario; ?></td> -->
                                 <td><?php echo $k->Nombre_Usuario; ?></td>
                                 <td><?php echo $k->Cedula_Usuario; ?></td>
                                 <td><?php echo $k->Correo_Usuario; ?></td>
                                 <td><?php echo $k->Num_Usuario; ?></td>
                                 <td><?php echo $k->Observacion; ?></td>
+                                <td><?php echo $k->Fecha; ?></td>
                                 <td>
                                     <a href="?c=nuevo&Id_Usuario=<?php echo $k->Id_Usuario ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
                                     <a href="?c=eliminar&Id_Usuario=<?php echo $k->Id_Usuario ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>

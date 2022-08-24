@@ -14,6 +14,7 @@ class Usuario
     public $Pensiones_Usuario;
     public $Plan_Usuario;
     public $Observacion;
+    public $Fecha;
     public function __construct()
     {
         try {
@@ -49,8 +50,8 @@ class Usuario
     public function insertar(Usuario $data)
     {
         try {
-            $query = "insert into usuario_nuevo (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Dire_Usuario, Eps_Usuario, Pensiones_Usuario, Plan_Usuario, Observacion) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Dire_Usuario, $data->Eps_Usuario, $data->Pensiones_Usuario, $data->Plan_Usuario, $data->Observacion));
+            $query = "insert into usuario_nuevo (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Dire_Usuario, Eps_Usuario, Pensiones_Usuario, Plan_Usuario, Observacion, Fecha) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Dire_Usuario, $data->Eps_Usuario, $data->Pensiones_Usuario, $data->Plan_Usuario, $data->Observacion, $data->Fecha));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -72,8 +73,8 @@ class Usuario
     public function actualizarDatos(Usuario $data)
     {
         try {
-            $query = "update usuario_nuevo set Nombre_Usuario=?, Cedula_Usuario=?, Correo_Usuario=?, Num_Usuario=?, Dire_Usuario=?, Eps_Usuario=?, Pensiones_Usuario=?, Plan_Usuario=?,Observacion=? where Id_Usuario=?";
-            $this->Conexion->prepare($query)->execute(array($data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Dire_Usuario, $data->Eps_Usuario, $data->Pensiones_Usuario, $data->Plan_Usuario, $data->Observacion, $data->Id_Usuario));
+            $query = "update usuario_nuevo set Nombre_Usuario=?, Cedula_Usuario=?, Correo_Usuario=?, Num_Usuario=?, Dire_Usuario=?, Eps_Usuario=?, Pensiones_Usuario=?, Plan_Usuario=?,Observacion=?,Fecha=? where Id_Usuario=?";
+            $this->Conexion->prepare($query)->execute(array($data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Dire_Usuario, $data->Eps_Usuario, $data->Pensiones_Usuario, $data->Plan_Usuario, $data->Observacion, $data->Fecha, $data->Id_Usuario));
         } catch (Exception $e) {
             die($e->getMessage());
         }

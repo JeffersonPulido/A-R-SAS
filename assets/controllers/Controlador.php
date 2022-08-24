@@ -11,10 +11,12 @@ class Control
     {
         $this->MODEL = new UsuarioInt();
     }
+
     public function index()
     {
         include_once '../views/inicio.php';
     }
+
     public function nuevo()
     {
         $guar = new UsuarioInt();
@@ -34,6 +36,7 @@ class Control
         $guar->Correo_Usuario = $_POST['txtCorreo'];
         $guar->Num_Usuario = $_POST['txtCelular'];
         $guar->Observacion = $_POST['txtObservacion'];
+        $guar->Fecha = $_POST['txtFecha'];
         $guar->Id_Usuario > 0 ? $this->MODEL->actualizarDatos($guar) : $this->MODEL->insertar($guar);
         header("location: ../views/init.php"); 
     }
@@ -58,6 +61,12 @@ class ControlU
     {
         include_once '../views/inicioU.php';
     }
+
+    public function adjunto()
+    {
+        include_once '../views/adjuntos.php';
+    }
+
     public function nuevo()
     {
         $guar = new Usuario();
@@ -81,6 +90,7 @@ class ControlU
         $guar->Pensiones_Usuario = $_POST['txtPensiones'];
         $guar->Plan_Usuario = $_POST['txtPlan'];
         $guar->Observacion = $_POST['txtObservacion'];
+        $guar->Fecha = $_POST['txtFecha'];
         $guar->Id_Usuario > 0 ? $this->MODEL->actualizarDatos($guar) : $this->MODEL->insertar($guar);
         header("location: ../views/initU.php"); 
     }

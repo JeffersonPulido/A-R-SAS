@@ -10,6 +10,7 @@ class UsuarioInt
     public $Correo_Usuario;
     public $Num_Usuario;
     public $Observacion;
+    public $Fecha;
     public function __construct()
     {
         try {
@@ -45,8 +46,8 @@ class UsuarioInt
     public function insertar(UsuarioInt $data)
     {
         try {
-            $query = "insert into usuario_interesado (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Observacion) values(?, ?, ?, ?, ?, ?)";
-            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion));
+            $query = "insert into usuario_interesado (Id_Usuario, Nombre_Usuario, Cedula_Usuario, Correo_Usuario, Num_Usuario, Observacion, Fecha) values(?, ?, ?, ?, ?, ?, ?)";
+            $this->Conexion->prepare($query)->execute(array($data->Id_Usuario, $data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion, $data->Fecha));
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -68,8 +69,8 @@ class UsuarioInt
     public function actualizarDatos(UsuarioInt $data)
     {
         try {
-            $query = "update usuario_interesado set Nombre_Usuario=?, Cedula_Usuario=?, Correo_Usuario=?, Num_Usuario=?, Observacion=? where Id_Usuario=?";
-            $this->Conexion->prepare($query)->execute(array($data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion, $data->Id_Usuario));
+            $query = "update usuario_interesado set Nombre_Usuario=?, Cedula_Usuario=?, Correo_Usuario=?, Num_Usuario=?, Observacion=?, Fecha=? where Id_Usuario=?";
+            $this->Conexion->prepare($query)->execute(array($data->Nombre_Usuario, $data->Cedula_Usuario, $data->Correo_Usuario, $data->Num_Usuario, $data->Observacion, $data->Fecha, $data->Id_Usuario));
         } catch (Exception $e) {
             die($e->getMessage());
         }
