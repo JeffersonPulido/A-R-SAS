@@ -1,0 +1,115 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.containerLog{
+    background-color: #00A859;
+    padding: 5% 2% 5% 2%;
+    text-align: center;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.login{
+    padding: 5% 0% 5% 0%;
+    background-color: whitesmoke;
+    height: 60%;
+    width: 50%;
+    margin: auto;
+    border-radius: 2%;
+    -webkit-box-shadow: 5px 9px 21px 0px rgba(0, 0, 0, 0.822);
+    -moz-box-shadow: 5px 9px 21px 0px rgba(0,0,0,0.822);
+    box-shadow: 5px 9px 21px 0px rgba(0,0,0,0.822);
+}
+
+.logologin{
+    padding-top: 2vh;
+    width: 65%;
+}
+
+.titleLog{
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+.form{
+    padding-top: 5vh;
+    width: 70%;
+    margin: auto;   
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+/*carousel*/
+
+.carrusel {
+display: flex;
+gap: 50px;
+justify-content: center;
+padding-top: 10vh;
+}
+
+.carrusel ul {
+list-style: none;
+margin: 0;
+padding: 0;
+max-width: 1030px;
+/* max-width: 510px; */
+scroll-behavior: smooth;
+}
+
+.carrusel-fotos {
+display: flex;
+gap: 30px;
+overflow: auto;
+}
+
+.carrusel-fotos img {
+background: black;
+border: 2px solid black;
+width: 400px;
+height: 400px;
+object-fit: contain;
+}
+
+.carrusel-menu {
+display: none;
+}
+
+@media screen and (min-width: 500px) {
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .carrusel-fotos {
+        overflow: hidden;
+    }
+
+    .carrusel-fotos img {
+        width: 400px;
+        height: 400px;
+    }
+    .carrusel-menu {
+        display: block;
+    }
+    .carrusel-menu img {
+        box-sizing: border-box;
+        width: 50px;
+        height: 40px;
+        border: 2px solid black;
+    }
+    .carrusel-menu img:hover {
+        border: none;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}

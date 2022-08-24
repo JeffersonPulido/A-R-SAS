@@ -11,10 +11,12 @@ class Control
     {
         $this->MODEL = new UsuarioInt();
     }
+
     public function index()
     {
         include_once '../views/inicio.php';
     }
+
     public function nuevo()
     {
         $guar = new UsuarioInt();
@@ -59,6 +61,12 @@ class ControlU
     {
         include_once '../views/inicioU.php';
     }
+
+    public function adjunto()
+    {
+        include_once '../views/adjuntos.php';
+    }
+
     public function nuevo()
     {
         $guar = new Usuario();

@@ -155,6 +155,7 @@
                                 <td><?php echo $k->Observacion; ?></td>
                                 <td><?php echo $k->Fecha; ?></td>
                                 <td>
+                                    <a href="?c=adjunto&Id_Usuario=<?php echo $k->Id_Usuario ?>&Nombre_Usuario=<?php echo $k->Nombre_Usuario;  ?>" class="btn btn-outline-info btn-sm"><i class="fas fa-folder"></i></a> 
                                     <a href="?c=nuevo&Id_Usuario=<?php echo $k->Id_Usuario ?>" class="btn btn-outline-warning btn-sm"><i class="fas fa-edit"></i></a> 
                                     <a href="?c=eliminar&Id_Usuario=<?php echo $k->Id_Usuario ?> " class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
                                 </td>
@@ -165,7 +166,5 @@
                 </div>
             </div>
         </div>
-        <!--FOOTER-->
-        <?php include 'footer.php'; ?>
     </body>
 </html>
