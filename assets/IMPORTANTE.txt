@@ -1,0 +1,1 @@
+El campo de Plan_Usuario en la base de datos debe tener varchar(30)
