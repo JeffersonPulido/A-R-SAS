@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2022 a las 14:07:15
+-- Tiempo de generación: 10-07-2022 a las 00:15:19
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.3
 
@@ -61,7 +61,8 @@ INSERT INTO `planes` (`Id_Plan`, `Nombre_Plan`, `Descripcion_Plan`, `Riesgo_Plan
 (18, 'INTEGRAL', 'EPS, ARL, PENSION Y CAJA DE COMPENSACION', 3, 305000),
 (19, 'INTEGRAL', 'EPS, ARL, PENSION Y CAJA DE COMPENSACION', 4, 325000),
 (20, 'INTEGRAL', 'EPS, ARL, PENSION Y CAJA DE COMPENSACION', 5, 350000);
-------------------------------------------------
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `user`
@@ -93,9 +94,9 @@ CREATE TABLE `usuario_interesado` (
   `Cedula_Usuario` varchar(60) CHARACTER SET latin1 DEFAULT NULL,
   `Correo_Usuario` varchar(60) CHARACTER SET latin1 DEFAULT NULL,
   `Num_Usuario` varchar(60) CHARACTER SET latin1 DEFAULT NULL,
-  `Observacion` varchar(200) CHARACTER SET latin1 DEFAULT NULL
+  `Observacion` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
+  `Fecha` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
 
 -- --------------------------------------------------------
 
@@ -113,9 +114,11 @@ CREATE TABLE `usuario_nuevo` (
   `Eps_Usuario` varchar(15) CHARACTER SET latin1 DEFAULT NULL,
   `Pensiones_Usuario` varchar(15) CHARACTER SET latin1 DEFAULT NULL,
   `Plan_Usuario` varchar(15) CHARACTER SET latin1 DEFAULT NULL,
-  `Observacion` varchar(200) CHARACTER SET latin1 DEFAULT NULL
+  `Observacion` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
+  `Fecha` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
+--
 -- Índices para tablas volcadas
 --
 
@@ -143,3 +146,29 @@ ALTER TABLE `usuario_interesado`
 ALTER TABLE `usuario_nuevo`
   ADD PRIMARY KEY (`Id_Usuario`);
 
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `planes`
+--
+ALTER TABLE `planes`
+  MODIFY `Id_Plan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario_interesado`
+--
+ALTER TABLE `usuario_interesado`
+  MODIFY `Id_Usuario` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario_nuevo`
+--
+ALTER TABLE `usuario_nuevo`
+  MODIFY `Id_Usuario` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
